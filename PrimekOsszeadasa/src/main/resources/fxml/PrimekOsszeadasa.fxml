@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import primek.osszeadas.kezelo.*?>
+
+<AnchorPane prefHeight="200.0" prefWidth="316.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="primek.osszeadas.kezelo.PrimekOsszeadasaKezelo">
+   <children>
+      <Text layoutX="51.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prímszámok Összeadása">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="35.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adja meg mennyi prímszámot adjon össze:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="118.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(1-től 5000 -ig)" />
+      <NumberTextField fx:id="megadottSzam" layoutX="84.0" layoutY="76.0" />
+      <Text fx:id="szoveg1" layoutX="10.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Az első">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="beadottSzam" layoutX="57.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="40.904296875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="szoveg2" layoutX="105.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="prímszámok összege:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="primekOsszege" layoutX="229.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="85.904296875">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="hibaUzenet" layoutX="54.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="208.0">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Text>
+      <Button layoutX="132.0" layoutY="159.0" mnemonicParsing="false" onAction="#szamol" text="Számol" />
+   </children>
+</AnchorPane>
