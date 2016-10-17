@@ -34,6 +34,7 @@ public class PrimekOsszeadasaKezelo implements Initializable {
 	@FXML
 	private void szamol(ActionEvent event) {
 
+		// Ha üresen marad a beviteli mező.
 		if (megadottSzam.getText().isEmpty()) {
 			hibaUzenet.setFill(Color.RED);
 			hibaUzenet.setText("Meg kell adni egy számot!");
@@ -41,7 +42,11 @@ public class PrimekOsszeadasaKezelo implements Initializable {
 			return;
 		}
 
-		if (megadottSzam.getText().length() >=10 ) {
+		// Ha 10 karakternél hoszabb számod adunk meg, mivel az Integer.parseInt
+		// csak 10 karakter alatt tudja átkonvertálni a számot.
+		// Piros színnel kiírja a hibaüzenetet és elrejti a többi kiírt mezőt és
+		// kitörli a beíirt számot.
+		if (megadottSzam.getText().length() >= 10) {
 			hibaUzenet.setFill(Color.RED);
 			hibaUzenet.setText("A maximum megadható szám 5000!");
 			SzovegElrejtese();
@@ -57,6 +62,9 @@ public class PrimekOsszeadasaKezelo implements Initializable {
 		int szam = 2;
 		int szamlalo = 0;
 
+		// Ha a beirt szám nagyobb mint 5000.
+		// Piros színnel kiírja a hibaüzenetet és elrejti a többi kiírt mezőt és
+		// kitörli a beíirt számot.
 		if (beirtSzam > 5000) {
 			hibaUzenet.setFill(Color.RED);
 			hibaUzenet.setText("A maximum megadható szám 5000!");
@@ -73,6 +81,9 @@ public class PrimekOsszeadasaKezelo implements Initializable {
 			szam++;
 		}
 
+		// Ha beirt szám 5000 vagy 5000 alatt van akkor összeadja a megadott
+		// számnak megfelelő menyiségű prímszámot majd kiírja tájékozató
+		// szövegként
 		OsszegKiirasa();
 		beadottSzam.setFill(Color.GREEN);
 		beadottSzam.setText(mennyitadjonOssze);

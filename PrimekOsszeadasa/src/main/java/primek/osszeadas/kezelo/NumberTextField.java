@@ -5,7 +5,7 @@ import javafx.scene.control.TextField;
 public class NumberTextField extends TextField {
 	
 	public NumberTextField() {
-		this.setPromptText("Írjon be egy számot.");
+		this.setPromptText("Írjon be egy számot...");
 	}
 	
 	@Override
